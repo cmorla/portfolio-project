@@ -1,0 +1,213 @@
+/* general text */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-size: 18pt;
+}
+h1{
+    font-size: 48px;
+    line-height: 2.5;
+    text-align: center;
+}
+p{
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.5;
+    margin:auto;
+    width: 92.5%;
+    /* padding-right: 5%;
+    padding-left: 5%; */
+}
+
+/* upper nav */
+header{
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    background:#fafafa;
+    border-bottom: 4px solid rgb(119, 102, 167);
+}
+.nav_pages{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.nav_link a{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    line-height: 1.5;
+}
+.nav_link a:hover, a:focus{
+    color: orangered;
+    text-decoration: underline dotted;
+}
+.nav_pages .current{
+    text-transform: uppercase;
+    font-style: italic;
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+}
+.skip a{
+position: absolute;
+top: -40px;
+}
+.skip a:focus{
+position: absolute;
+top: 10px;
+}
+
+/* gallery */
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.img-container{
+    width: 440px;
+    height: 340px;
+    border: 10px;
+    margin: 10px;
+    margin-bottom: 30px;
+    position:relative;
+    background: rgb(70, 70, 70);
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px;
+    margin: 10px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.txt-container {
+    min-width: 350px;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.img-container:hover img {
+    opacity: 0.05;
+}
+.img-container:hover .txt-container {
+    opacity: 1;
+}
+.txt {
+    color: white;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.button{
+    margin-top: 10px;
+    padding: 5px 4px 7px 10px;
+    background-color: rgb(57, 0, 212);
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid white;
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-decoration: none;
+}
+.button:hover {
+    background-color: rgb(250, 134, 2);
+}
+
+/* footer */
+footer{
+    background-color: #f8f2f2;
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* tablet */
+@media screen and (min-width: 768px){
+    header{
+        min-height: 70px;
+        flex-direction: row;
+    }
+    .nav_pages{
+        flex-direction: row;
+        padding: 10px;
+    }
+    .nav_link a{
+        padding: 14px;
+    }
+    .nav_link a:hover, a:focus{
+        text-decoration: underline wavy rgb(57, 0, 212);
+    }
+    main p{
+        text-align: start;
+        margin:auto;
+        width: 95%;
+        /* padding-right: 5%;
+        padding-left: 5%; */
+    }
+    .txt {
+        text-align: initial;
+    }
+    .button{
+        padding: 5px 9px 7px 10px;
+        margin-top: initial;
+        width: initial;
+        position: initial;
+        left: initial;
+        transform: initial;
+        -ms-transform: initial;
+    }
+    .button:hover {
+        background-color: rgb(250, 134, 2);
+    }
+    .gallery{
+        flex-direction: column-reverse;
+    }
+}
+/* desktop */
+@media screen and (min-width: 1200px){
+    header{
+        min-height: 70px;
+        flex-direction: row-reverse;
+    }
+    .nav_pages{
+        flex-direction: row;
+        padding: 10px;
+    }
+    .nav_link a{
+        padding: 14px;
+    }
+    .nav_link a:hover, a:focus{
+        text-decoration: underline wavy rgb(57, 0, 212);
+    }
+    .gallery{
+        flex-direction: row-reverse;
+    }
+}

@@ -1,0 +1,234 @@
+/* general text */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-size: 18pt;
+}
+h1{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 56px;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-transform: uppercase;
+    -webkit-animation:colorchange 20s infinite alternate;
+}
+h2{
+    font-size: 36px;
+    line-height: 2.5;
+    text-align: center;
+}
+/* header styling */
+.elegantshadow {
+    color:rgb(57, 0, 212);
+    letter-spacing: 1px;
+    text-shadow:
+    4px 4px 0px #d5d5d5, 
+    7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+/* header animation */
+@-webkit-keyframes colorchange {
+    0% {
+        color: blue;
+    }
+    10% {
+        color: #8e44ad;
+    }
+    20% {
+        color: #1abc9c;
+    }
+    30% {
+        color: #d35400;
+    }
+    40% {
+        color: blue;
+    }
+    50% {
+        color: #34495e;
+    }
+    60% {
+        color: blue;
+    }
+    70% {
+        color: #2980b9;
+    }
+    80% {
+        color: #f1c40f;
+    }
+    90% {
+        color: #2980b9;
+    }
+    100% {
+        color: pink;
+    }
+}
+/* upper nav */
+header{
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    background:#fafafa;
+    border-bottom: 4px solid rgb(119, 102, 167);
+}
+.nav_pages{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.nav_link a{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    line-height: 1.5;
+}
+.nav_link a:hover, a:focus{
+    color: orangered;
+    text-decoration: underline dotted;
+}
+.nav_pages .current{
+    text-transform: uppercase;
+    font-style: italic;
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+}
+.skip a{
+position: absolute;
+top: -40px;
+}
+.skip a:focus{
+position: absolute;
+top: 10px;
+}
+
+/* primary page content */
+.about-section{
+    display: block;
+    padding: 0 10px 20px 10px;
+    width: 95%;
+    justify-content: center;
+    text-align: center;
+}
+#bannerimg{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.didyouknow{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.stat-section{
+    width: 500px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+.stat-txt-section{
+    text-align: center;
+}
+.stat-img-section{
+    padding: 20px 0 20px 0;
+    width: 100%;
+    height: 350px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid rgb(57, 0, 212);
+}
+
+/* footer */
+footer{
+    background-color: #fafafa;
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+/* tablet */
+@media screen and (min-width: 768px){
+    header{
+        min-height: 70px;
+        flex-direction: row;
+    }
+    .nav_pages{
+        flex-direction: row;
+        padding: 10px;
+    }
+    .nav_link a{
+        padding: 14px;
+    }
+    .nav_link a:hover, a:focus{
+        text-decoration: underline wavy rgb(57, 0, 212);
+    }
+    h2{
+        margin: 20px 0 0 0;
+    }
+    .about-section{
+        text-align: justify;
+        margin: auto;
+        padding: 0 20px 30px 20px;
+        width: 95%
+    }
+    .didyouknow{
+        align-items: flex-end;
+        justify-content: none;
+        align-items: none;
+        flex-wrap: none;
+    }
+    .stat-txt-section{
+        text-align: justify;
+        align-items: flex-start;
+        min-height: 120px;
+    }
+    img{
+        border: 6px solid rgb(57, 0, 212);
+    }
+    #bannerimg{
+        border: none;
+        filter: grayscale(50%);
+    }
+    .didyouknow{
+        flex-direction: row-reverse;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px){
+    header{
+        flex-direction: row-reverse;
+    }
+    .nav_pages{
+        flex-direction: row;
+    }
+    img{
+        border: 10px solid rgb(57, 0, 212);
+    }
+    #bannerimg{
+        border: none;
+        filter: grayscale(75%);
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    h1{
+        animation: none;
+    }
+}

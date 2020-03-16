@@ -1,0 +1,249 @@
+/* general text */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-size: 18pt;
+}
+h1{
+    font-size: 48px;
+    line-height: 2.5;
+    text-align: center;
+}
+h2{
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+/* upper nav */
+header{
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    background:#fafafa;
+    border-bottom: 4px solid rgb(119, 102, 167);
+}
+.nav_pages{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.nav_link a{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    line-height: 1.5;
+}
+.nav_link a:hover, a:focus{
+    color: orangered;
+    text-decoration: underline dotted;
+}
+.nav_pages .current{
+    text-transform: uppercase;
+    font-style: italic;
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+}
+.skip a{
+position: absolute;
+top: -40px;
+}
+.skip a:focus{
+position: absolute;
+top: 10px;
+}
+
+/* primary content */
+#parallax{
+    background-image: url("../images/coloredtiles.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 400px;
+}
+.text-section{
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: rgb(181, 158, 204);
+    border-radius: 7px;
+    padding: 0 0 20px 0;
+}
+.text-section > p{
+    flex-basis: 90%;
+    padding: 20px 15px 10px 20px;
+    line-height: 1.2;
+}
+
+/* form content */
+#form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgb(248, 200, 161);
+    border-radius: 7px;
+    padding: 20px 0 20px 0;
+}
+form{
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+form label{
+    display: initial;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    margin: auto;
+    border-radius: 7px;
+    padding: 10px 0 5px 0;
+    margin: 5px 10px 5px 0;
+    font-size: 12pt;
+}
+form input{
+    vertical-align: middle;
+    padding: 10px;
+    width: 95%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: black;
+}
+form textarea{
+    width: 99%;
+    resize: none;
+}
+#formbutton{
+    padding: 10px;
+    margin:auto;
+    margin-top: 20px;
+    background-color: rgb(57, 0, 212);
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+/* footer */
+footer{
+    background-color: #fafafa;
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* tablet */
+@media screen and (min-width: 768px){
+    header{
+        min-height: 70px;
+        flex-direction: row;
+    }
+    .nav_pages{
+        flex-direction: row;
+        padding: 10px;
+    }
+    .nav_link a{
+        padding: 14px;
+    }
+    .nav_link a:hover, a:focus{
+        text-decoration: underline wavy rgb(57, 0, 212);
+    }
+    .about-section{
+        text-align: justify;
+        padding: 0 20px 30px 20px;
+    }
+    #parallax{
+        margin-bottom: 40px;
+        filter: saturate(130%)
+    }
+    .text-section{
+        background: rgb(178, 144, 211);
+    }
+    #form-container{
+        display: initial;
+        display:block;
+        width:initial;
+        width: 900px;
+    }
+    form{
+        display: block;
+        height: auto;
+        flex-direction: row;
+        padding: 0px 35px;
+        width: 900px;
+    }
+    form label{
+        margin: 0 10px 0 10px;
+    }
+    form input{
+        margin: 10px 0;
+        width: 30.5%;
+    }
+    form textarea{
+        width: 90%;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+    #formbutton{
+        margin-top: 15px;
+        margin-left: 7px;
+    }
+}
+/* desktop */
+@media screen and (min-width: 1200px){
+    header{
+        flex-direction: row-reverse;
+    }
+    .nav_pages{
+        flex-direction: row;
+    }
+    #parallax{
+        margin-bottom: 40px;
+        filter: saturate(170%)
+    }
+    .text-section{
+        background: rgb(158, 101, 214);
+    }
+    .text-section > p{
+        color: white;
+    }
+    #formbutton{
+        margin-left: 61%;
+        margin-top: 15px;
+    }
+}
+@media screen and (prefers-reduced-motion: reduce){
+    #parallax{
+        animation-duration: 0s;
+        transition: none;
+        scroll-behavior: auto;
+        }
+    }
