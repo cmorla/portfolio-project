@@ -20,7 +20,7 @@ h2{
 
 /* upper nav */
 header{
-    min-height: 120px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -43,13 +43,16 @@ header{
     text-decoration: none;
     line-height: 1.5;
 }
+#current{
+    color: rgb(57, 0, 212);
+    text-decoration: initial;
+    text-transform: uppercase;
+    font-style: italic;
+}
 .nav_link a:hover, a:focus{
     color: orangered;
     text-decoration: underline dotted;
-}
-.nav_pages .current{
-    text-transform: uppercase;
-    font-style: italic;
+    line-height: 3;
 }
 .skip a{
     background: white;
@@ -163,7 +166,7 @@ footer{
 /* tablet */
 @media screen and (min-width: 768px){
     header{
-        min-height: 70px;
+        height: 80px;
         flex-direction: row;
     }
     .nav_pages{
