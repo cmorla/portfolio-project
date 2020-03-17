@@ -52,7 +52,6 @@ header{
 .nav_link a:hover, a:focus{
     color: orangered;
     text-decoration: underline dotted;
-    line-height: 3;
 }
 .skip a{
     background: white;
@@ -90,27 +89,6 @@ img{
     width: 50%;
     margin: auto;
 }
-/* .container{
-    display: grid;
-    grid-template-columns: 480px;
-    grid-template-rows: auto;
-
-    grid-row-gap: 15px;
-    grid-column: 1/-1;
-    grid-row: 1/auto;
-    width: 82%;
-    margin: auto;
-}
-.column-1{
-    grid-column: 1 / span 1;
-}
-.column-2{
-    grid-column: 1 / span 1;
-}
-.column-3{
-    grid-column: 1 / span 1;
-} */
-
 /* flip cards */
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
@@ -195,7 +173,7 @@ footer{
 }
 
 /* tablet */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 870px){
     header{
         height: 80px;
         flex-direction: row;
@@ -233,9 +211,11 @@ footer{
     .column-3{
         grid-area: 2 / 1 / 3 / 2;
     }
-}
+    .flip-card-inner {
+        text-align: justify;
+    }
 /* desktop */
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1300px){
     header{
         flex-direction: row-reverse;
     }

@@ -52,7 +52,6 @@ header{
 .nav_link a:hover, a:focus{
     color: orangered;
     text-decoration: underline dotted;
-    line-height: 3;
 }
 .skip a{
     background: white;
@@ -108,7 +107,6 @@ top: 10px;
     margin-bottom: 20px;
     background: rgb(248, 200, 161);
     border-radius: 7px;
-    padding: 20px 0 20px 0;
 }
 form{
     display: flex;
@@ -164,7 +162,7 @@ footer{
 }
 
 /* tablet */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 870px){
     header{
         height: 80px;
         flex-direction: row;
@@ -194,7 +192,57 @@ footer{
         display: initial;
         display:block;
         width:initial;
+        width: 700px;
+        padding: 2px 0;
+    }
+    form{
+        display: block;
+        height: auto;
+        flex-direction: row;
+        padding: 0px 35px;
+        width: 700px;
+    }
+    form label{
+        margin: 0 10px 0 10px;
+    }
+    form input{
+        margin: 10px 0;
+        width: 26%;
+    }
+    form textarea{
+        width: 90%;
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+    #formbutton{
+        margin-top: 15px;
+        margin-left: 7px;
+    }
+}
+/* desktop */
+@media screen and (min-width: 1120px){
+    header{
+        flex-direction: row-reverse;
+    }
+    .nav_pages{
+        flex-direction: row;
+    }
+    #parallax{
+        margin-bottom: 40px;
+        filter: saturate(170%)
+    }
+    .text-section{
+        background: rgb(158, 101, 214);
+    }
+    .text-section > p{
+        color: white;
+    }
+    #form-container{
+        display: initial;
+        display:block;
+        width:initial;
         width: 900px;
+        padding: 2px 0;
     }
     form{
         display: block;
@@ -214,29 +262,6 @@ footer{
         width: 90%;
         margin-left: 8px;
         margin-top: 10px;
-    }
-    #formbutton{
-        margin-top: 15px;
-        margin-left: 7px;
-    }
-}
-/* desktop */
-@media screen and (min-width: 1200px){
-    header{
-        flex-direction: row-reverse;
-    }
-    .nav_pages{
-        flex-direction: row;
-    }
-    #parallax{
-        margin-bottom: 40px;
-        filter: saturate(170%)
-    }
-    .text-section{
-        background: rgb(158, 101, 214);
-    }
-    .text-section > p{
-        color: white;
     }
     #formbutton{
         margin-left: 61%;

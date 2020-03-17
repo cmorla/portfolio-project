@@ -98,7 +98,6 @@ header{
 .nav_link a:hover, a:focus{
     color: orangered;
     text-decoration: underline dotted;
-    line-height: 3;
 }
 .skip a{
     background: white;
@@ -166,7 +165,7 @@ footer{
     text-align: center;
 }
 /* tablet */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 870px){
     header{
         height: 80px;
         flex-direction: row;
@@ -191,10 +190,7 @@ footer{
         width: 95%
     }
     .didyouknow{
-        align-items: flex-end;
-        justify-content: none;
-        align-items: none;
-        flex-wrap: none;
+        flex-direction: column-reverse;
     }
     .stat-txt-section{
         text-align: justify;
@@ -208,13 +204,10 @@ footer{
         border: none;
         filter: grayscale(50%);
     }
-    .didyouknow{
-        flex-direction: row-reverse;
-    }
 }
 
 /* desktop */
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1120px){
     header{
         flex-direction: row-reverse;
     }
@@ -227,6 +220,9 @@ footer{
     #bannerimg{
         border: none;
         filter: grayscale(75%);
+    }
+    .didyouknow{
+        flex-direction: row-reverse;
     }
 }
 
