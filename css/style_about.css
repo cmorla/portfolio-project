@@ -181,6 +181,7 @@ footer{
         text-align: justify;
         padding: 0 20px 30px 20px;
     }
+    /* image source: https://unsplash.com/photos/jR4Zf-riEjI */
     #parallax{
         margin-bottom: 40px;
         filter: saturate(130%)
@@ -269,9 +270,11 @@ footer{
     }
 }
 @media screen and (prefers-reduced-motion: reduce){
-    #parallax{
+    .skip a, #parallax{
         animation-duration: 0s;
         transition: none;
+        -webkit-transition: none;
         scroll-behavior: auto;
-        }
+        -ms-transform: none;
     }
+}

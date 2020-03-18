@@ -21,6 +21,7 @@ h2{
     text-align: center;
 }
 /* header styling */
+/* borrowed and modified from https://codepen.io/juanbrujo/pen/yGpAK */
 .elegantshadow {
     color:rgb(57, 0, 212);
     letter-spacing: 1px;
@@ -29,6 +30,8 @@ h2{
     7px 7px 0px rgba(0, 0, 0, 0.2);
     }
 /* header animation */
+/* borrowed and modified from https://codepen.io/raaasin/pen/quvHr */
+/* re: wave contrast issue - the error only displays on certain colors. the colors change every 2 seconds or based on animiation. I altererd some of the lighter colors to show darker to contrast better with white background. Hopefully that resolves infrequent contrast issues */
 @-webkit-keyframes colorchange {
     0% {
         color: blue;
@@ -52,16 +55,16 @@ h2{
         color: blue;
     }
     70% {
-        color: #2980b9;
+        color: #026eb6;
     }
     80% {
-        color: #f1c40f;
+        color: #fdcb01;
     }
     90% {
-        color: #2980b9;
+        color: #37afff;
     }
     100% {
-        color: pink;
+        color: rgb(148, 41, 58);
     }
 }
 /* upper nav */
@@ -227,7 +230,19 @@ footer{
 }
 
 @media screen and (prefers-reduced-motion: reduce){
+    .skip a{
+        -webkit-transition: none;
+        transition: none;
+    }
     h1{
         animation: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .skip a, h1 {
+        animation-duration: 0s;
+        transition: none;
+        scroll-behavior: auto;
+        -ms-transform: none;
     }
 }
