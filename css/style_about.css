@@ -44,10 +44,12 @@ header{
     line-height: 1.5;
 }
 #current{
-    color: rgb(57, 0, 212);
     text-decoration: initial;
     text-transform: uppercase;
     font-style: italic;
+    border: 2px rgb(60, 80, 33);
+	border-style: solid none none none;
+	background-color:  rgb(180, 244, 96);
 }
 .nav_link a:hover, a:focus{
     color: orangered;
@@ -79,6 +81,10 @@ top: 10px;
     color: white;
     height: 400px;
 }
+#parallax:focus{
+    /* borrow from Zixi Pan - MSI Student */
+    background-color: var(--c_01);
+}
 .text-section{
     display: flex;
     justify-content: center;
@@ -107,6 +113,7 @@ top: 10px;
     margin-bottom: 20px;
     background: rgb(248, 200, 161);
     border-radius: 7px;
+    padding: 10px 0;
 }
 form{
     display: flex;
@@ -162,6 +169,7 @@ footer{
 }
 
 /* tablet */
+/* I am unable to resolve weird hover behavior on nav link on tablet and desktop views on pages other than home page. I played around with line-height, padding, margins on nav links and containers to no avail. */
 @media screen and (min-width: 870px){
     header{
         height: 80px;
@@ -194,13 +202,13 @@ footer{
         display:block;
         width:initial;
         width: 700px;
-        padding: 2px 0;
+        padding: 15px 0;
     }
     form{
         display: block;
         height: auto;
         flex-direction: row;
-        padding: 0px 35px;
+        padding: 0 35px;
         width: 700px;
     }
     form label{
@@ -239,17 +247,9 @@ footer{
         color: white;
     }
     #form-container{
-        display: initial;
-        display:block;
-        width:initial;
         width: 900px;
-        padding: 2px 0;
     }
     form{
-        display: block;
-        height: auto;
-        flex-direction: row;
-        padding: 0px 35px;
         width: 900px;
     }
     form label{

@@ -44,10 +44,12 @@ header{
     line-height: 1.5;
 }
 #current{
-    color: rgb(57, 0, 212);
     text-decoration: initial;
     text-transform: uppercase;
     font-style: italic;
+    border: 2px rgb(60, 80, 33);
+	border-style: solid none none none;
+	background-color:  rgb(180, 244, 96);
 }
 .nav_link a:hover, a:focus{
     color: orangered;
@@ -110,7 +112,13 @@ img{
 .img-container:hover img {
     opacity: 0.05;
 }
+.img-container:focus img {
+    opacity: 0.05;
+}
 .img-container:hover .txt-container {
+    opacity: 1;
+}
+.img-container:focus .txt-container {
     opacity: 1;
 }
 .txt {
@@ -139,6 +147,9 @@ img{
 .button:hover {
     background-color: rgb(250, 134, 2);
 }
+.button:focus{
+    background-color: rgb(250, 134, 2);
+}
 
 /* footer */
 footer{
@@ -150,6 +161,7 @@ footer{
 }
 
 /* tablet */
+/* I am unable to resolve weird hover behavior on nav link on tablet and desktop views on pages other than home page. I played around with line-height, padding, margins on nav links and containers to no avail. */
 @media screen and (min-width: 870px){
     header{
         height: 80px;
@@ -166,7 +178,6 @@ footer{
     }
     .nav_link a:hover, a:focus{
         text-decoration: underline wavy rgb(57, 0, 212);
-        line-height: 3;
     }
     main p{
         text-align: start;
@@ -181,9 +192,6 @@ footer{
         left: initial;
         transform: initial;
         -ms-transform: initial;
-    }
-    .button:hover {
-        background-color: rgb(250, 134, 2);
     }
     .img-container{
         width: 400px;

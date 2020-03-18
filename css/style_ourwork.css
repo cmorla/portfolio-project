@@ -44,10 +44,12 @@ header{
     line-height: 1.5;
 }
 #current{
-    color: rgb(57, 0, 212);
     text-decoration: initial;
     text-transform: uppercase;
     font-style: italic;
+    border: 2px rgb(60, 80, 33);
+	border-style: solid none none none;
+	background-color:  rgb(180, 244, 96);
 }
 .nav_link a:hover, a:focus{
     color: orangered;
@@ -135,6 +137,9 @@ transform-style: preserve-3d;
 .flip-card:hover .flip-card-inner {
 transform: rotateY(180deg);
 }
+.flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+}
 
 .flip-card-front, .flip-card-back {
 position: absolute;
@@ -169,6 +174,7 @@ footer{
 }
 
 /* tablet */
+/* I am unable to resolve weird hover behavior on nav link on tablet and desktop views on pages other than home page. I played around with line-height, padding, margins on nav links and containers to no avail. */
 @media screen and (min-width: 870px){
     header{
         height: 80px;
@@ -212,7 +218,7 @@ footer{
     }
 }
 /* desktop */
-@media screen and (min-width: 1300px){
+@media screen and (min-width: 1120px){
     header{
         flex-direction: row-reverse;
     }
@@ -226,6 +232,9 @@ footer{
     .nav_link a:hover, a:focus{
         text-decoration: underline wavy rgb(57, 0, 212);
     }
+}
+
+@media screen and (min-width: 1320px){
     /* primary content */
     .container{
         grid-template-columns: repeat(3, 1fr);
@@ -236,7 +245,7 @@ footer{
     }
 }
 @media (prefers-reduced-motion: reduce) {
-    .skip a, .flip-card:hover, .flip-card-inner, .flip-card-back{
+    .skip a, .flip-card, .flip-card-inner, .flip-card-back{
         animation-duration: 0s;
         transition: none;
         -webkit-transition: none;
