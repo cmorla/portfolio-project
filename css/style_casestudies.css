@@ -20,7 +20,7 @@ p{
 
 /* upper nav */
 header{
-    height: 150px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -100,7 +100,7 @@ img{
     backface-visibility: hidden;
 }
 .txt-container {
-    min-width: 400px;
+    width: 380px;
     transition: .5s ease;
     opacity: 0;
     position: absolute;
@@ -124,9 +124,9 @@ img{
 .txt {
     color: white;
     letter-spacing: 1.2px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.2;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     text-align: center;
 }
 .button{
@@ -204,6 +204,9 @@ footer{
     .txt {
         text-align: initial;
         font-size: 16px;
+        margin-left: 5px;
+        margin-bottom: initial;
+        margin-bottom: 5px;
     }
 }
 /* desktop */

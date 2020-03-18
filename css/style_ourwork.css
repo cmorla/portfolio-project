@@ -20,7 +20,7 @@ h2{
 
 /* upper nav */
 header{
-    height: 150px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     list-style: none;
